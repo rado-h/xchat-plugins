@@ -106,7 +106,7 @@ if 'SoftIgnore' in  config:
 			channels = ['#' + channel for channel in config['SoftIgnore']['channels']]
 			_ignore_list['soft']['channels'] = set(channels)
 		else:
-			_ignore_list['soft']['channels'].add(config['SoftIgnore']['channels'])
+			_ignore_list['soft']['channels'].add('#' + config['SoftIgnore']['channels'])
 		print "[ChannelFilter] channels to soft filter: " + ', '.join(_ignore_list['soft']['channels'])
 		has_anything_to_filter = True
 
